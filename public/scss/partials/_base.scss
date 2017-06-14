@@ -1,3 +1,6 @@
-body {
-  background: $sls_red;
+html,body {
+	height: 100%;
+	background-color: $white;
+	color: $default_text_color;
+	margin: 50px 0 0 0;
 }
