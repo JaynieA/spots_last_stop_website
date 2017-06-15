@@ -1,13 +1,18 @@
-//Theme Colors
+// ** ===== THEME COLORS ===== ** //
 $white: #fff;
 $sls_red: #DC0000;
 
-//Text Colors
+// ** ===== NAVBAR COLORS ===== ** //
+$nav_dropdown_bkd: rgba(0, 0, 0, 0.8);
+
+// ** ===== TEXT COLORS ===== ** //
 $default_text_color: #515150;
 
-//Button Colors
+// ** ===== BUTTON COLORS ===== ** //
 $btn_green: #439f46;
 
-//Fonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+// ** ===== FONTS ===== ** //
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Maven+Pro:400,500,700|Quicksand:300,400,500,700);
 $open-sans: 'Open Sans', sans-serif;
+$maven-pro: 'Maven Pro', sans-serif;
+$quicksand: 'Quicksand', sans-serif;

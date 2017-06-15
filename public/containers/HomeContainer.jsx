@@ -1,10 +1,13 @@
 import React from 'react';
+import {Jumbotron} from 'react-bootstrap';
 
 class HomeContainer extends React.Component {
   render() {
     return (
       <div>
-        <h1>Home</h1>
+        <Jumbotron>
+          <h1>Home</h1>
+        </Jumbotron>
       </div>
     )
   }
