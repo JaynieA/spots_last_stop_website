@@ -18,7 +18,8 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              compact: false
+              compact: false,
+              plugins: ['transform-class-properties', 'transform-object-rest-spread']
             }
           }
         ]

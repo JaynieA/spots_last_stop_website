@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactRouter, {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import NavbarInstance from '../components/NavbarInstance';
+import NavbarContainer from '../containers/NavbarContainer';
 import HomeContainer from '../containers/HomeContainer';
 
 class App extends React.Component {
@@ -9,7 +9,7 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <NavbarInstance/>
+          <NavbarContainer/>
           <Switch>
             <Route exact path="/" component={HomeContainer}/>
           </Switch>

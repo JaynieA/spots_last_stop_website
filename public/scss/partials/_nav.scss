@@ -7,18 +7,32 @@
 
 // ** ===== MENU ITEMS ===== ** //
 .nav {
+  margin-right: 2%;
   >li {
     >a {
       text-transform: uppercase;
       font-weight: bold;
     }
   }
+  //bootstrap override
   a {
     color: $white !important;
+    transition: all 0.2s ease;
     &:hover,
     &:active,
     &:focus {
       color: #cccccc !important;
+      background-color: transparent !important;
+    }
+    &:visited {
+      background-color: transparent !important;
+    }
+  }
+  //bootstrap override
+  .open {
+    >a,
+    >a:hover,
+    >a:focus {
       background-color: transparent !important;
     }
   }
