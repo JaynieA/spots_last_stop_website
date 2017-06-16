@@ -46,7 +46,8 @@ class NavbarContainer extends React.Component {
               id='adopt-nav-dropdown'
               onMouseEnter = { this.handleOpen('adopt') }
               onMouseLeave = { this.handleClose('adopt') }
-              open={ this.state.isOpen.adopt }>
+              open={ this.state.isOpen.adopt }
+              onToggle={'hover'}>
               <MenuItem eventKey={2.1}>Adoptable Dogs</MenuItem>
               <MenuItem eventKey={2.2}>Adoption Application</MenuItem>
               <MenuItem eventKey={2.3}>FAQ's & Policies</MenuItem>
@@ -60,7 +61,8 @@ class NavbarContainer extends React.Component {
               id='foster-nav-dropdown'
               onMouseEnter = { this.handleOpen('foster') }
               onMouseLeave = { this.handleClose('foster') }
-              open={ this.state.isOpen.foster }>
+              open={ this.state.isOpen.foster }
+              onToggle={'hover'}>
               <MenuItem eventKey={3.1}>Foster Application</MenuItem>
               <MenuItem eventKey={3.2}>FAQ's & Policies</MenuItem>
               <MenuItem eventKey={3.3}>Foster Update</MenuItem>
@@ -69,14 +71,22 @@ class NavbarContainer extends React.Component {
             <NavDropdown
               eventKey={5}
               title='Support'
-              id='support-nav-dropdown'>
+              id='support-nav-dropdown'
+              onMouseEnter = { this.handleOpen('support') }
+              onMouseLeave = { this.handleClose('support') }
+              open={ this.state.isOpen.support }
+              onToggle={'hover'}>
               <MenuItem eventKey={5.1}>Donate</MenuItem>
               <MenuItem eventKey={5.2}>Our Partners</MenuItem>
             </NavDropdown>
             <NavDropdown
               eventKey={6}
               title='About Us'
-              id='about-nav-dropdown'>
+              id='about-nav-dropdown'
+              onMouseEnter = { this.handleOpen('about') }
+              onMouseLeave = { this.handleClose('about') }
+              open={ this.state.isOpen.about }
+              onToggle={'hover'}>
               <MenuItem eventKey={6.1}>About SLS</MenuItem>
               <MenuItem eventKey={6.2}>Our Team</MenuItem>
             </NavDropdown>
