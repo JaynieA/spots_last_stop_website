@@ -26,11 +26,6 @@ class NavbarContainer extends React.Component {
     }); // end setState
   } // end handleClose
 
-
-  // handleClose = () => {
-  //   this.setState({ isOpen: false })
-  // } // end handleClose
-
   render() {
     return (
       <Navbar collapseOnSelect fixedTop fluid role='Navigation'>
