@@ -1,0 +1,28 @@
+// ** ===== SVG ===== ** //
+
+.jumbo_svg_contain {
+  margin-top: -61px;
+  text-align: center;
+  .jumbo_svg {
+    cursor: pointer;
+  }
+}
+.svg_arrow_contain {
+  padding: 39px 0 0 0;
+  position: relative;
+  width: 150px;
+  height: 80px;
+  margin: -80px auto 0 auto;
+  cursor: pointer;
+  .jumbo_svg_arrow {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-bottom: 2px solid #333;
+    border-right: 2px solid #333;
+    z-index: 700;
+    height: 16px;
+    width: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+}
