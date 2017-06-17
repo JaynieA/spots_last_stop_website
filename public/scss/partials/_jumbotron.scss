@@ -5,4 +5,26 @@
   font-family: $quicksand;
   background: url('../assets/images/home/jumbotron-background.jpg') no-repeat center center fixed;
   background-size: cover;
+  .jumbo_header_half {
+    width: 50%;
+    color: $dark_header_color;
+    text-shadow: 1px 1px $dark_shadow_color;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 15px 0 15px;
+    margin: 38% 0 0 0;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .jumbotron {
+    .jumbo_header_half {
+      height: 100%;
+      position: fixed;
+      margin-top: 17%;
+      color: $white;
+      text-shadow: 2px 2px $light_shadow_color;
+    }
+  }
 }

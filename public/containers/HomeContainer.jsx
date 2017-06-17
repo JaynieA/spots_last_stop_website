@@ -6,7 +6,9 @@ class HomeContainer extends React.Component {
     return (
       <div>
         <Jumbotron>
-          <h1>Home</h1>
+          <h1 className={'jumbo_header_half'}>
+            Spot's Last Stop Canine Rescue
+          </h1>
         </Jumbotron>
       </div>
     )
