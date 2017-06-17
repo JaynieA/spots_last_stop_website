@@ -1,0 +1,12 @@
+// ** ===== HOME PAGE STYLES ===== ** //
+
+.home_banner {
+  min-height: 60vh;
+  position: relative;
+  z-index: 2;
+  background-color: $white;
+  border-bottom: 1px solid black;
+  &.home_banner_spotlight {
+    margin: -15px 0 0 0;
+  }
+}
