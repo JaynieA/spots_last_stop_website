@@ -24,7 +24,7 @@ class HomeContainer extends React.Component {
             </p>
           </div>
         </Jumbotron>
-        <BlurpSvg color={'#fff'} className={'jumbo_svg_contain'}/>
+        <BlurpSvg color={'#fff'} containerClass={'jumbo_svg_contain'} svgClass={'jumbo_svg'}/>
         <SvgArrow/>
         <div className={'home_banner home_banner_spotlight'}></div>
         <div className={'home_banner'}></div>

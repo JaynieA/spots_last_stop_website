@@ -68,12 +68,19 @@ const FooterLinksGrid = () => (
   </Grid>
 )
 
+const FooterSvgArrow = () => (
+  <div className={'footer_svg_arrow'}>
+    <div className={'footer_arrow_up'}></div>
+    <div className={'footer_arrow_up'}></div>
+  </div>
+)
+
 class FooterContainer extends React.Component {
   render() {
     return (
       <div className={'footer_wrap'}>
-        <BlurpSvg color={'#333'} className={'footer_svg_contain'}/>
-        <div></div>
+        <BlurpSvg color={'#333'} containerClass={'footer_svg_contain'} svgClass={'footer_svg'}/>
+        <FooterSvgArrow/>
         <footer className={'footer'}>
           <FooterLinksGrid/>
           <FooterCopyright/>

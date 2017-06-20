@@ -1,10 +1,14 @@
 // ** ===== SVG ===== ** //
 
+// Jumbotron Home Blurp SVG
+
 .jumbo_svg_contain {
   margin-top: -61px;
   text-align: center;
   .jumbo_svg {
     cursor: pointer;
+    position: relative;
+    z-index: 200;
   }
 }
 .svg_arrow_contain {
@@ -19,7 +23,8 @@
     transform: rotate(45deg);
     border-bottom: 2px solid #333;
     border-right: 2px solid #333;
-    z-index: 700;
+    position: relative;
+    z-index: 400;
     height: 16px;
     width: 16px;
     margin: 0 auto;
@@ -27,9 +32,36 @@
   }
 }
 
+// Footer Blurp SVG
+
 .footer_svg_contain {
   @extend .jumbo_svg_contain;
   z-index: 300;
   position: relative;
   margin: 0 0 -16px 0;
+  .footer_svg {
+    cursor: pointer;
+  }
+}
+
+.footer_svg_arrow {
+  width: 150px;
+  height: 80px;
+  margin: -95px auto 0 auto;
+  padding: 60px 0 0 0;
+  cursor: pointer;
+  .footer_arrow_up {
+    height: 10px;
+    width: 10px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 400;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top: 2px solid $white;
+    border-left: 2px solid $white;
+    &:nth-of-type(2) {
+      margin-top: -3px;
+    }
+  }
 }
