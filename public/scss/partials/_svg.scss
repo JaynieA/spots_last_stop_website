@@ -26,3 +26,10 @@
     cursor: pointer;
   }
 }
+
+.footer_svg_contain {
+  @extend .jumbo_svg_contain;
+  z-index: 300;
+  position: relative;
+  margin: 0 0 -16px 0;
+}

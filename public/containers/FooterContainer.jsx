@@ -2,6 +2,8 @@ import React from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import {Link, NavLink} from 'react-router-dom';
 
+import BlurpSvg from '../components/BlurpSvg';
+
 const FooterCopyright = () => (
   <div className={'footer_copyright'}>
     <p>
@@ -66,17 +68,13 @@ const FooterLinksGrid = () => (
   </Grid>
 )
 
-
-
 class FooterContainer extends React.Component {
   render() {
     return (
       <div className={'footer_wrap'}>
-        <div>SVG HERE</div>
-
+        <BlurpSvg color={'#333'} className={'footer_svg_contain'}/>
+        <div></div>
         <footer className={'footer'}>
-
-
           <FooterLinksGrid/>
           <FooterCopyright/>
         </footer>
