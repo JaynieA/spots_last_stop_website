@@ -91,9 +91,12 @@ class FooterContainer extends React.Component {
           color={'#333'}
           containerClass={'footer_svg_contain'}
           svgClass={'footer_svg'}
+          iconClass={'footer_svg_arrow'}
           controlFunc={this.handleSvgClick}
-        />
-        <FooterSvgArrow/>
+        >
+          <div className={'footer_arrow_up'}></div>
+          <div className={'footer_arrow_up'}></div>
+        </BlurpSvg>
         <footer className={'footer'}>
           <FooterLinksGrid/>
           <FooterCopyright/>
