@@ -76,10 +76,23 @@ const FooterSvgArrow = () => (
 )
 
 class FooterContainer extends React.Component {
+  constructor(props) {
+    super(props);
+  } // end constructor
+
+  handleSvgClick = () => {
+    console.log('handle svg click--> scroll to top');
+  } // end handleSvgClick
+
   render() {
     return (
       <div className={'footer_wrap'}>
-        <BlurpSvg color={'#333'} containerClass={'footer_svg_contain'} svgClass={'footer_svg'}/>
+        <BlurpSvg
+          color={'#333'}
+          containerClass={'footer_svg_contain'}
+          svgClass={'footer_svg'}
+          controlFunc={this.handleSvgClick}
+        />
         <FooterSvgArrow/>
         <footer className={'footer'}>
           <FooterLinksGrid/>

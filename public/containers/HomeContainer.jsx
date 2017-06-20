@@ -11,6 +11,14 @@ const SvgArrow = () => (
 ) // end SvgArrow
 
 class HomeContainer extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleSvgClick = () => {
+    console.log('handle svg click--> scroll down a bit');
+  }
+
   render() {
     return (
       <div>
@@ -24,7 +32,12 @@ class HomeContainer extends React.Component {
             </p>
           </div>
         </Jumbotron>
-        <BlurpSvg color={'#fff'} containerClass={'jumbo_svg_contain'} svgClass={'jumbo_svg'}/>
+        <BlurpSvg
+          color={'#fff'}
+          containerClass={'jumbo_svg_contain'}
+          svgClass={'jumbo_svg'}
+          controlFunc={this.handleSvgClick}
+        />
         <SvgArrow/>
         <div className={'home_banner home_banner_spotlight'}></div>
         <div className={'home_banner'}></div>
