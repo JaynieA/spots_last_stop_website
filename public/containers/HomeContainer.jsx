@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Jumbotron} from 'react-bootstrap';
+import Scroll from 'react-scroll';
 
 import BlurpSvg from '../components/BlurpSvg';
 
@@ -13,11 +14,14 @@ const SvgArrow = () => (
 class HomeContainer extends React.Component {
   constructor(props) {
     super(props);
-  }
+  } // end constructor
 
   handleSvgClick = () => {
-    console.log('handle svg click--> scroll down a bit');
-  }
+    //Scroll down 1 full height of window
+    const windowHeight = window.innerHeight;
+    const scroll = Scroll.animateScroll;
+    scroll.scrollTo(windowHeight);
+  } // end handleSvgClick
 
   render() {
     return (

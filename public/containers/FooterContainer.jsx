@@ -1,6 +1,7 @@
 import React from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import {Link, NavLink} from 'react-router-dom';
+import Scroll from 'react-scroll';
 
 import BlurpSvg from '../components/BlurpSvg';
 
@@ -81,7 +82,9 @@ class FooterContainer extends React.Component {
   } // end constructor
 
   handleSvgClick = () => {
-    console.log('handle svg click--> scroll to top');
+    //Scroll to the top of the page
+    const scroll = Scroll.animateScroll;
+    scroll.scrollToTop();
   } // end handleSvgClick
 
   render() {
