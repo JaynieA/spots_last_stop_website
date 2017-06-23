@@ -85,6 +85,15 @@ class FooterContainer extends React.Component {
     //Scroll to the top of the page
     const scroll = Scroll.animateScroll;
     scroll.scrollToTop();
+
+    //Begin calculating for footer blurp animations
+    let windowHeight = window.innerHeight;
+    let start = 0, end = 0, timeline = null, played = false, offsetTop = 0, footerHeight;
+    footerHeight = document.getElementsByClassName("footer")[0].offsetHeight + 10;
+    start = offsetTop - windowHeight + footerHeight * 3 / 4;
+
+    console.log(footerHeight, offsetTop, windowHeight, start);
+
   } // end handleSvgClick
 
   render() {
