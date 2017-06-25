@@ -85,6 +85,16 @@ class FooterContainer extends React.Component {
     //Scroll to the top of the page
     const scroll = Scroll.animateScroll;
     scroll.scrollToTop();
+  } // end handleSvgClick
+
+  componentDidMount = () => {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  componentWillUnmount = () => {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+  handleScroll(e) {
+    console.log('scroll event');
 
     //Begin calculating for footer blurp animations
     let windowHeight = window.innerHeight;
@@ -92,9 +102,14 @@ class FooterContainer extends React.Component {
     footerHeight = document.getElementsByClassName("footer")[0].offsetHeight + 10;
     start = offsetTop - windowHeight + footerHeight * 3 / 4;
 
-    console.log(footerHeight, offsetTop, windowHeight, start);
+    console.log('footer height-->',footerHeight, 'offsetTop-->', offsetTop, 'windowHeight-->',windowHeight, 'start-->',start);
+    console.log('scroll event-->', e);
 
-  } // end handleSvgClick
+    window.latestKnownScrollY = window.pageYOffset;
+    let newScrollY = latestKnownScrollY;
+
+    console.log(newScrollY, document.body.scrollHeight);
+  }
 
   render() {
     return (
