@@ -1,0 +1,11 @@
+// ** ===== SLIDE IN-OUT TRANSITION ===== ** //
+.slide-enter.slide-enter-active {
+    height: 51px;
+    -webkit-transition: height 1.5s ease;
+}
+
+.slide-leave.slide-leave-active {
+    height: 0px;
+    opacity: 0;
+    -webkit-transition: height 1.5s ease;
+}
