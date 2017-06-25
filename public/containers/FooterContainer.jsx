@@ -79,6 +79,9 @@ const FooterSvgArrow = () => (
 class FooterContainer extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isAtBottom: false
+    };
   } // end constructor
 
   handleSvgClick = () => {
@@ -87,29 +90,30 @@ class FooterContainer extends React.Component {
     scroll.scrollToTop();
   } // end handleSvgClick
 
+  handleScroll = () => {
+    const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+    const body = document.body;
+    const html = document.documentElement;
+    const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
+    const windowBottom = windowHeight + window.pageYOffset;
+    if (windowBottom >= docHeight) {
+      this.setState({
+        isAtBottom: true
+      });
+    } else {
+      this.setState({
+        isAtBottom: false
+      });
+    } // end else
+  } // end handleScroll
+
   componentDidMount = () => {
     window.addEventListener('scroll', this.handleScroll);
-  }
+  } // end componentDidMount
+
   componentWillUnmount = () => {
     window.removeEventListener('scroll', this.handleScroll);
-  }
-  handleScroll(e) {
-    console.log('scroll event');
-
-    //Begin calculating for footer blurp animations
-    let windowHeight = window.innerHeight;
-    let start = 0, end = 0, timeline = null, played = false, offsetTop = 0, footerHeight;
-    footerHeight = document.getElementsByClassName("footer")[0].offsetHeight + 10;
-    start = offsetTop - windowHeight + footerHeight * 3 / 4;
-
-    console.log('footer height-->',footerHeight, 'offsetTop-->', offsetTop, 'windowHeight-->',windowHeight, 'start-->',start);
-    console.log('scroll event-->', e);
-
-    window.latestKnownScrollY = window.pageYOffset;
-    let newScrollY = latestKnownScrollY;
-
-    console.log(newScrollY, document.body.scrollHeight);
-  }
+  } // end componentWillUnmount
 
   render() {
     return (
@@ -127,6 +131,7 @@ class FooterContainer extends React.Component {
         <footer className={'footer'}>
           <FooterLinksGrid/>
           <FooterCopyright/>
+          <div>{this.state.message}</div>
         </footer>
       </div>
     )
