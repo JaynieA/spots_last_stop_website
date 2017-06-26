@@ -2,14 +2,8 @@ import React from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import {Link, NavLink} from 'react-router-dom';
 import Scroll from 'react-scroll';
-import {CSSTransitionGroup} from 'react-transition-group';
 
 import BlurpSvg from '../components/BlurpSvg';
-
-const FirstChild = (props) => {
-  const childrenArray = React.Children.toArray(props.children);
-  return childrenArray[0] || null;
-} // end FirstChild
 
 const FooterCopyright = () => (
   <div className={'footer_copyright'}>
@@ -97,11 +91,14 @@ class FooterContainer extends React.Component {
   } // end handleSvgClick
 
   handleScroll = () => {
-    const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+    const windowHeight = "innerHeight" in window
+      ? window.innerHeight
+      : document.documentElement.offsetHeight;
     const body = document.body;
     const html = document.documentElement;
     const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
-    const windowBottom = windowHeight + window.pageYOffset;
+    const offset = 60;
+    const windowBottom = windowHeight + window.pageYOffset + offset;
     if (windowBottom >= docHeight) {
       this.setState({
         isAtBottom: true
@@ -124,26 +121,17 @@ class FooterContainer extends React.Component {
   render() {
     return (
       <div className={'footer_wrap'}>
-
-        <CSSTransitionGroup
-        transitionName="slide"
-        transitionEnterTimeout={300}
-        transitionLeaveTimeout={300}
-        component={FirstChild}>
-        {this.state.isAtBottom &&
-          <BlurpSvg
-            color={'#333'}
-            containerClass={'footer_svg_contain'}
-            svgClass={'footer_svg'}
-            iconClass={'footer_svg_arrow'}
-            controlFunc={this.handleSvgClick}
-          >
-            <div className={'footer_arrow_up'}></div>
-            <div className={'footer_arrow_up'}></div>
-          </BlurpSvg>
-        }
-        </CSSTransitionGroup>
-
+        <BlurpSvg
+          color={'#333'}
+          containerClass={'footer_svg_contain'}
+          svgClass={'footer_svg'}
+          iconClass={'footer_svg_arrow'}
+          controlFunc={this.handleSvgClick}
+          isShown={this.state.isAtBottom}
+        >
+          <div className={'footer_arrow_up'}></div>
+          <div className={'footer_arrow_up'}></div>
+        </BlurpSvg>
         <footer className={'footer'}>
           <FooterLinksGrid/>
           <FooterCopyright/>
