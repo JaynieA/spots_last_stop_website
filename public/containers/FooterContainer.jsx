@@ -108,6 +108,8 @@ class FooterContainer extends React.Component {
         isAtBottom: false
       });
     } // end else
+    const something = document.getElementsByClassName('footer_wrap')[0].clientHeight;
+    console.log('here-->', something);
   } // end handleScroll
 
   componentDidMount = () => {

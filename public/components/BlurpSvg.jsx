@@ -58,4 +58,8 @@ BlurpSvg.propTypes = {
   isShown: PropTypes.bool
 } // end JumboSvg.propTypes
 
+BlurpSvg.defaultProps = {
+  isShown: true
+}; // end defaultProps
+
 export default BlurpSvg;
