@@ -4,6 +4,7 @@ import {Jumbotron} from 'react-bootstrap';
 import Scroll from 'react-scroll';
 
 import BlurpSvg from '../components/BlurpSvg';
+import Button from '../components/Button';
 
 const SvgArrow = () => (
   <div className={'svg_arrow_contain'}>
@@ -46,7 +47,11 @@ class HomeContainer extends React.Component {
           <div className={'jumbo_svg_arrow'}></div>
         </BlurpSvg>
 
-        <div className={'home_banner home_banner_spotlight'}></div>
+        <div className={'home_banner home_banner_spotlight'}>
+          <Button
+            text='More about *DogName*'
+          />
+        </div>
         <div className={'home_banner'}></div>
         <div className={'home_banner'}></div>
       </div>
