@@ -50,6 +50,7 @@ class HomeContainer extends React.Component {
         <div className={'home_banner home_banner_spotlight'}>
           <Button
             text='More about *DogName*'
+            color='green'
           />
         </div>
         <div className={'home_banner'}></div>
