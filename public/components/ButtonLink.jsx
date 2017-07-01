@@ -8,13 +8,13 @@ const ButtonLink = (props) => (
       {props.text}
     </button>
   </Link>
-)
+) // end ButtonLink
 
 ButtonLink.propTypes = {
   to: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequiredtus,
+  color: PropTypes.string.isRequired,
   type: PropTypes.string
-}
+} // end ButtonLink.propTypes
 
 export default ButtonLink;

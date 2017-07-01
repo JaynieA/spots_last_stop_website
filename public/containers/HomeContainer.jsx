@@ -5,6 +5,7 @@ import Scroll from 'react-scroll';
 
 import BlurpSvg from '../components/BlurpSvg';
 import ButtonLink from '../components/ButtonLink';
+import HomeBanner from '../components/HomeBanner';
 
 const SvgArrow = () => (
   <div className={'svg_arrow_contain'}>
@@ -47,14 +48,18 @@ class HomeContainer extends React.Component {
           <div className={'jumbo_svg_arrow'}></div>
         </BlurpSvg>
 
-        <div className={'home_banner home_banner_spotlight'}>
+        <HomeBanner
+          title='spotlight'
+          type='spotlight'>
           <ButtonLink
             to='/adopt'
             text='More about *DogName*'
             color='green'
             type='content'
           />
-        </div>
+        </HomeBanner>
+
+        
         <div className={'home_banner'}></div>
         <div className={'home_banner'}></div>
       </div>
