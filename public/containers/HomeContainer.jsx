@@ -47,7 +47,6 @@ class HomeContainer extends React.Component {
         >
           <div className={'jumbo_svg_arrow'}></div>
         </BlurpSvg>
-
         <HomeBanner
           title='spotlight'
           type='spotlight'>
@@ -58,10 +57,38 @@ class HomeContainer extends React.Component {
             type='content'
           />
         </HomeBanner>
-
-        
-        <div className={'home_banner'}></div>
-        <div className={'home_banner'}></div>
+        <HomeBanner
+          title='News and Events'
+          type='news'>
+          <ButtonLink
+            to='/events'
+            text='Learn More'
+            color='green'
+            type='content'
+          />
+          <ButtonLink
+            to='/adopt'
+            text='More about *DogName*'
+            color='green'
+            type='content'
+          />
+        </HomeBanner>
+        <HomeBanner
+          title='resources and partners'
+          type='resources'>
+          <ButtonLink
+            to='/resources'
+            text='Read More'
+            color='green'
+            type='content'
+          />
+          <ButtonLink
+            to='/partners'
+            text='Read More'
+            color='green'
+            type='content'
+          />
+        </HomeBanner>
       </div>
     )
   }
