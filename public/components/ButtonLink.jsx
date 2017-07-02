@@ -17,4 +17,8 @@ ButtonLink.propTypes = {
   type: PropTypes.string
 } // end ButtonLink.propTypes
 
+ButtonLink.defaultProps = {
+  color: 'green'
+} // end ButtonLink.defaultProps
+
 export default ButtonLink;

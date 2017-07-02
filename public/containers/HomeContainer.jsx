@@ -6,6 +6,7 @@ import Scroll from 'react-scroll';
 import BlurpSvg from '../components/BlurpSvg';
 import ButtonLink from '../components/ButtonLink';
 import Banner from '../components/Banner';
+import LineBreak from '../components/LineBreak';
 
 const SvgArrow = () => (
   <div className={'svg_arrow_contain'}>
@@ -50,42 +51,41 @@ class HomeContainer extends React.Component {
         <Banner
           title='spotlight'
           type='spotlight'>
+          <LineBreak/>
           <ButtonLink
             to='/adopt'
             text='More about *DogName*'
-            color='green'
             type='content'
           />
         </Banner>
         <Banner
           title='News and Events'
           type='news'>
+          <LineBreak/>
           <ButtonLink
             to='/events'
             text='Learn More'
-            color='green'
             type='content'
           />
           <ButtonLink
             to='/adopt'
             text='More about *DogName*'
-            color='green'
             type='content'
           />
         </Banner>
         <Banner
           title='resources and partners'
           type='resources'>
+          <LineBreak/>
           <ButtonLink
             to='/resources'
             text='Read More'
-            color='green'
             type='content'
           />
+          <LineBreak/>
           <ButtonLink
             to='/partners'
             text='Read More'
-            color='green'
             type='content'
           />
         </Banner>
