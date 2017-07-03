@@ -6,7 +6,7 @@ import Scroll from 'react-scroll';
 import BlurpSvg from '../components/BlurpSvg';
 import ButtonLink from '../components/ButtonLink';
 import Banner from '../components/Banner';
-import LineBreak from '../components/LineBreak';
+import BannerHeaders from '../components/BannerHeaders';
 
 const SvgArrow = () => (
   <div className={'svg_arrow_contain'}>
@@ -51,7 +51,10 @@ class HomeContainer extends React.Component {
         <Banner
           title='spotlight'
           type='spotlight'>
-          <LineBreak/>
+          <BannerHeaders
+            headerText='Name Here'
+            subheaderText='Breed Here'
+          />
           <ButtonLink
             to='/adopt'
             text='More about *DogName*'
@@ -61,12 +64,20 @@ class HomeContainer extends React.Component {
         <Banner
           title='News and Events'
           type='news'>
-          <LineBreak/>
+          <BannerHeaders
+            headerText='Event Name Here'
+            subheaderText='Date Here'
+            optionalSubheaderText='Time Here'
+          />
           <ButtonLink
             to='/events'
             text='Learn More'
             type='content'
           />
+        <BannerHeaders
+          headerText='Pupdate!'
+          subheaderText='Where are they now?'
+        />
           <ButtonLink
             to='/adopt'
             text='More about *DogName*'
@@ -76,13 +87,19 @@ class HomeContainer extends React.Component {
         <Banner
           title='resources and partners'
           type='resources'>
-          <LineBreak/>
+          <BannerHeaders
+            headerText='Resources'
+            subheaderText='Helpful tips & tricks'
+          />
           <ButtonLink
             to='/resources'
             text='Read More'
             type='content'
           />
-          <LineBreak/>
+        <BannerHeaders
+          headerText='Our Partners'
+          subheaderText='Training, Boarding, and Veterinary Care'
+        />
           <ButtonLink
             to='/partners'
             text='Read More'

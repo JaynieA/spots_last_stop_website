@@ -11,3 +11,20 @@
     margin: -15px 0 0 0;
   }
 }
+
+.banner_header {
+  text-align: center;
+  font-family: $open-sans;
+  font-size: 26px;
+  margin: 10px 0 3px 0;
+  padding: 0;
+}
+
+.banner_subheader {
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 14px;
+  text-transform: uppercase;
+}
