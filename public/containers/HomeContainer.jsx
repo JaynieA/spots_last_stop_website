@@ -6,7 +6,7 @@ import Scroll from 'react-scroll';
 import BlurpSvg from '../components/BlurpSvg';
 import ButtonLink from '../components/ButtonLink';
 import Banner from '../components/Banner';
-import BannerHeaders from '../components/BannerHeaders';
+import BannerContentBlock from '../components/BannerContentBlock';
 
 const SvgArrow = () => (
   <div className={'svg_arrow_contain'}>
@@ -52,7 +52,7 @@ class HomeContainer extends React.Component {
         <Banner
           title='spotlight'
           type='spotlight'>
-          <BannerHeaders
+          <BannerContentBlock
             headerText='Name Here'
             subheaderText='Breed Here'
             contentText={lorem}
@@ -66,7 +66,7 @@ class HomeContainer extends React.Component {
         <Banner
           title='News and Events'
           type='news'>
-          <BannerHeaders
+          <BannerContentBlock
             headerText='Event Name Here'
             subheaderText='Date Here'
             optionalSubheaderText='Time Here'
@@ -77,7 +77,7 @@ class HomeContainer extends React.Component {
             text='Learn More'
             type='content'
           />
-        <BannerHeaders
+        <BannerContentBlock
           headerText='Pupdate!'
           subheaderText='Where are they now?'
           contentText={lorem}
@@ -91,7 +91,7 @@ class HomeContainer extends React.Component {
         <Banner
           title='resources and partners'
           type='resources'>
-          <BannerHeaders
+          <BannerContentBlock
             headerText='Resources'
             subheaderText='Helpful tips & tricks'
             contentText={lorem}
@@ -101,7 +101,7 @@ class HomeContainer extends React.Component {
             text='Read More'
             type='content'
           />
-        <BannerHeaders
+        <BannerContentBlock
           headerText='Our Partners'
           subheaderText='Training, Boarding, and Veterinary Care'
           contentText={lorem}
