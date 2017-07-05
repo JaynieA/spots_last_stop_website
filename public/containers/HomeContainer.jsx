@@ -27,6 +27,7 @@ class HomeContainer extends React.Component {
   } // end handleSvgClick
 
   render() {
+    const lorem = 'Cake danish toffee donut dragée. Candy chocolate cake carrot cake pudding sweet roll tootsie roll marshmallow. Sweet roll icing marshmallow cupcake cookie. Cotton candy cupcake gingerbread biscuit macaroon. Cheesecake gummies sugar plum sweet. Tootsie roll macaroon chocolate cake halvah liquorice cake tootsie roll cheesecake brownie. Chocolate gummies biscuit jelly beans. Cookie sugar plum sweet bear claw marzipan pastry tootsie roll jelly-o wafer. Wafer lemon drops apple pie jujubes. Gummi bears chocolate cake wafer sesame snaps danish brownie. '
     return (
       <div>
         <Jumbotron>
@@ -54,6 +55,7 @@ class HomeContainer extends React.Component {
           <BannerHeaders
             headerText='Name Here'
             subheaderText='Breed Here'
+            contentText={lorem}
           />
           <ButtonLink
             to='/adopt'
@@ -68,6 +70,7 @@ class HomeContainer extends React.Component {
             headerText='Event Name Here'
             subheaderText='Date Here'
             optionalSubheaderText='Time Here'
+            contentText={lorem}
           />
           <ButtonLink
             to='/events'
@@ -77,6 +80,7 @@ class HomeContainer extends React.Component {
         <BannerHeaders
           headerText='Pupdate!'
           subheaderText='Where are they now?'
+          contentText={lorem}
         />
           <ButtonLink
             to='/adopt'
@@ -90,6 +94,7 @@ class HomeContainer extends React.Component {
           <BannerHeaders
             headerText='Resources'
             subheaderText='Helpful tips & tricks'
+            contentText={lorem}
           />
           <ButtonLink
             to='/resources'
@@ -99,6 +104,7 @@ class HomeContainer extends React.Component {
         <BannerHeaders
           headerText='Our Partners'
           subheaderText='Training, Boarding, and Veterinary Care'
+          contentText={lorem}
         />
           <ButtonLink
             to='/partners'
