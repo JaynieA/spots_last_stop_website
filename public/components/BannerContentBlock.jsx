@@ -5,13 +5,14 @@ import LineBreak from '../components/LineBreak';
 
 const BannerContentBlock = (props) => (
   <div className='banner_content'>
-    <h2 className='banner_header'>{props.headerText}</h2>
-    <h4 className='banner_subheader'>{props.subheaderText}</h4>
+    <h2>{props.headerText}</h2>
+    <h4>{props.subheaderText}</h4>
     {props.optionalSubheaderText &&
       <h4 className='banner_subheader'>{props.optionalSubheaderText}</h4>
     }
     <LineBreak/>
     <p>{props.contentText}</p>
+    {props.children}
   </div>
 ) // end BannerContentBlock
 

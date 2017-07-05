@@ -56,12 +56,13 @@ class HomeContainer extends React.Component {
             headerText='Name Here'
             subheaderText='Breed Here'
             contentText={lorem}
-          />
-          <ButtonLink
-            to='/adopt'
-            text='More about *DogName*'
-            type='content'
-          />
+          >
+            <ButtonLink
+              to='/adopt'
+              text='More about *DogName*'
+              type='content'
+            />
+        </BannerContentBlock>
         </Banner>
         <Banner
           title='News and Events'
@@ -71,22 +72,24 @@ class HomeContainer extends React.Component {
             subheaderText='Date Here'
             optionalSubheaderText='Time Here'
             contentText={lorem}
-          />
-          <ButtonLink
-            to='/events'
-            text='Learn More'
-            type='content'
-          />
-        <BannerContentBlock
-          headerText='Pupdate!'
-          subheaderText='Where are they now?'
-          contentText={lorem}
-        />
-          <ButtonLink
-            to='/adopt'
-            text='More about *DogName*'
-            type='content'
-          />
+          >
+            <ButtonLink
+              to='/events'
+              text='Learn More'
+              type='content'
+            />
+          </BannerContentBlock>
+          <BannerContentBlock
+            headerText='Pupdate!'
+            subheaderText='Where are they now?'
+            contentText={lorem}
+          >
+            <ButtonLink
+              to='/adopt'
+              text='More about *DogName*'
+              type='content'
+            />
+          </BannerContentBlock>
         </Banner>
         <Banner
           title='resources and partners'
@@ -95,22 +98,24 @@ class HomeContainer extends React.Component {
             headerText='Resources'
             subheaderText='Helpful tips & tricks'
             contentText={lorem}
-          />
+          >
           <ButtonLink
             to='/resources'
             text='Read More'
             type='content'
           />
-        <BannerContentBlock
-          headerText='Our Partners'
-          subheaderText='Training, Boarding, and Veterinary Care'
-          contentText={lorem}
-        />
-          <ButtonLink
-            to='/partners'
-            text='Read More'
-            type='content'
-          />
+          </BannerContentBlock>
+          <BannerContentBlock
+            headerText='Our Partners'
+            subheaderText='Training, Boarding, and Veterinary Care'
+            contentText={lorem}
+          >
+            <ButtonLink
+              to='/partners'
+              text='Read More'
+              type='content'
+            />
+          </BannerContentBlock>
         </Banner>
       </div>
     )
