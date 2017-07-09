@@ -5,7 +5,7 @@
   position: relative;
   z-index: 2;
   background-color: $white;
-  // border-bottom: 1px solid black;
+  border-bottom: 1px solid $white;
   padding: 0 15px 0 15px;
   &.banner_spotlight {
     margin: -15px 0 0 0;
@@ -47,6 +47,19 @@
   }
 }
 
+.banner_news {
+  background: url('../assets/images/home/news_background.jpg') no-repeat center center;
+  background-size: cover;
+  .banner_content {
+    background-color: $transparent_background;
+  }
+}
+
 .banner_resources {
   margin: 0 0 50px 0;
+  background: url('../assets/images/home/resources_background.jpg') no-repeat center center;
+  background-size: cover;
+  .banner_content {
+    background-color: $transparent_background;
+  }
 }
