@@ -93,7 +93,8 @@ class HomeContainer extends React.Component {
         </Banner>
         <Banner
           title='resources and partners'
-          type='resources'>
+          type='resources'
+          hasWrap={true}>
           <BannerContentBlock
             headerText='Resources'
             subheaderText='Helpful tips & tricks'
